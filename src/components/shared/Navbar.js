@@ -10,6 +10,7 @@ import logo from '@/assets/logo.png';
 import { IconButton, Stack } from '@mui/material';
 import { Facebook, Instagram, LinkedIn, Twitter } from '@mui/icons-material';
 import Link from 'next/link';
+import Header from './Header';
 
 
 const navItems = [
@@ -43,6 +44,8 @@ function Navbar() {
 
 
     return (
+        <>
+        <Header></Header>
         <AppBar position="static">
             <Container maxWidth="xl" className='bg-black'>
                 <Toolbar>
@@ -73,6 +76,7 @@ function Navbar() {
                 </Toolbar>
             </Container>
         </AppBar>
+        </>
     );
 }
 export default Navbar;
