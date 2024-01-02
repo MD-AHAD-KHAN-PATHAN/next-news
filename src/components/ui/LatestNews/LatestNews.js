@@ -2,11 +2,16 @@ import { Box, Button, Card, CardActionArea, CardContent, CardMedia, Grid, Typogr
 import Image from "next/image";
 import bitcoin from "@/assets/topnews.png"
 import National from "@/assets/National.png"
+import Rectangle1 from "@/assets/Rectangle1.png"
+import Rectangle2 from "@/assets/Rectangle2.png"
+import Rectangle3 from "@/assets/Rectangle3.png"
+import Rectangle4 from "@/assets/Rectangle4.png"
 
 
 const LatestNews = () => {
     return (
-        <Box className='my-20'>
+        <Box className='my-10'>
+            <h1 className='mb-5 border-b-2 text-2xl font-bold pb-4'><span className='border-b-4 border-red-500 pb-4'>National News</span></h1>
             <Card>
                 <CardActionArea>
                     <CardMedia>
@@ -32,11 +37,11 @@ const LatestNews = () => {
                     <Card>
                         <CardActionArea>
                             <CardMedia>
-                                <Image src={National} width={400} alt="National News" />
+                                <Image src={Rectangle1} width={400} alt="National News" />
                             </CardMedia>
                             <CardContent>
                                 <Typography gutterBottom variant="h6" component="div">
-                                EU’s New Sanctions Aim to Cut Russia Off From World Bank
+                                    EU’s New Sanctions Aim to Cut Russia Off From World Bank
                                 </Typography>
                                 <Typography variant="body2" color="text.secondary" className="my-2">
                                     By Ahad Khan - Mar 18 2023
@@ -52,11 +57,11 @@ const LatestNews = () => {
                     <Card>
                         <CardActionArea>
                             <CardMedia>
-                                <Image src={National} width={400} alt="National News" />
+                                <Image src={Rectangle2} width={400} alt="National News" />
                             </CardMedia>
                             <CardContent>
                                 <Typography gutterBottom variant="h6" component="div">
-                                EU’s New Sanctions Aim to Cut Russia Off From World Bank
+                                    EU’s New Sanctions Aim to Cut Russia Off From World Bank
                                 </Typography>
                                 <Typography variant="body2" color="text.secondary" className="my-2">
                                     By Ahad Khan - Mar 18 2023
@@ -72,11 +77,11 @@ const LatestNews = () => {
                     <Card>
                         <CardActionArea>
                             <CardMedia>
-                                <Image src={National} width={400} alt="National News" />
+                                <Image src={Rectangle3} width={400} alt="National News" />
                             </CardMedia>
                             <CardContent>
                                 <Typography gutterBottom variant="h6" component="div">
-                                EU’s New Sanctions Aim to Cut Russia Off From World Bank
+                                    EU’s New Sanctions Aim to Cut Russia Off From World Bank
                                 </Typography>
                                 <Typography variant="body2" color="text.secondary" className="my-2">
                                     By Ahad Khan - Mar 18 2023
@@ -92,11 +97,11 @@ const LatestNews = () => {
                     <Card>
                         <CardActionArea>
                             <CardMedia>
-                                <Image src={National} width={400} alt="National News" />
+                                <Image src={Rectangle4} width={400} alt="National News" />
                             </CardMedia>
                             <CardContent>
                                 <Typography gutterBottom variant="h6" component="div">
-                                EU’s New Sanctions Aim to Cut Russia Off From World Bank
+                                    EU’s New Sanctions Aim to Cut Russia Off From World Bank
                                 </Typography>
                                 <Typography variant="body2" color="text.secondary" className="my-2">
                                     By Ahad Khan - Mar 18 2023
@@ -108,7 +113,7 @@ const LatestNews = () => {
                         </CardActionArea>
                     </Card>
                 </Grid>
-                
+
             </Grid>
         </Box>
     );
