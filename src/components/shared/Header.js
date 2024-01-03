@@ -1,7 +1,7 @@
 import { Box, Container, Typography } from "@mui/material";
 import headerImage from '@/assets/The Dragon News.png';
 import Image from "next/image";
-import { getCurrentDate } from "../ui/setCurrentDate";
+import { getCurrentDate } from "@/utils/getCurrentDate";
 const Header = () => {
     const currentDate = getCurrentDate();
     return (
