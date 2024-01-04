@@ -1,7 +1,6 @@
 import { Box, Button, Card, CardActionArea, CardContent, CardMedia, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import bitcoin from "@/assets/topnews.png"
-import National from "@/assets/National.png"
 import Rectangle1 from "@/assets/Rectangle1.png"
 import Rectangle2 from "@/assets/Rectangle2.png"
 import Rectangle3 from "@/assets/Rectangle3.png"

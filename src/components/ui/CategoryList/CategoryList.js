@@ -1,6 +1,6 @@
 'use client'
-import { getAllCategories } from "@/utils/getAllCategories";
-import { Box, Button, Divider, Stack, Typography } from "@mui/material";
+// import { getAllCategories } from "@/utils/getAllCategories";
+import { Box, Button, Stack, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 
 const CategoryList = () => {
@@ -23,7 +23,7 @@ const CategoryList = () => {
     console.log(data);
 
     return (
-        <Box className='bg-gray-100 p-4 mt-20 rounded'>
+        <Box className='bg-gray-100 p-4 mt-32 rounded'>
             <Typography variant="h6">Categories</Typography>
             <p className="border mt-2"></p>
             <Stack rowGap={1} sx={{mt: 2.5}}>
