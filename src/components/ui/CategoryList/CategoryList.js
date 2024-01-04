@@ -1,17 +1,35 @@
-// 'use client'
+'use client'
 import { getAllCategories } from "@/utils/getAllCategories";
 import { Box, Button, Divider, Stack, Typography } from "@mui/material";
+import { useEffect, useState } from "react";
 
-const CategoryList = async () => {
+const CategoryList = () => {
 
-    const {data} = await getAllCategories();
+    // const {data} = getAllCategories();
+    const [data, setData] = useState(null)
+    const [isLoading, setLoading] = useState(true)
+   
+    useEffect(() => {
+      fetch('https://the-news-portal-server.vercel.app/categories')
+        .then((res) => res.json())
+        .then((data) => {
+          setData(data.data)
+          setLoading(false)
+        })
+    }, [])
+   
+    if (isLoading) return <p>Loading...</p>
+    if (!data) return <p>No profile data</p>
+    console.log(data);
 
     return (
-        <Box>
+        <Box className='bg-gray-100 p-4 mt-20 rounded'>
             <Typography variant="h6">Categories</Typography>
-            <Divider/>
+            <p className="border mt-2"></p>
             <Stack rowGap={1} sx={{mt: 2.5}}>
-                
+                {
+                    data.map(category => <Button key={category.id} variant="outlined">{category.title}</Button>)
+                }
             </Stack>
         </Box>
     );
