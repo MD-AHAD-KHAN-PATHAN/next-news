@@ -3,9 +3,10 @@ import { Box, Card, CardActionArea, CardContent, CardMedia, Grid, Typography } f
 import Image from "next/image";
 import img1 from "@/assets/Rectangle1.png";
 
-const DynamicNewsPage = () => {
+const DynamicNewsPage = ({params, searchParams}) => {
     return (
         <Box className='my-10'>
+            <p>{searchParams.category}</p>
             <h1 className='mb-4 border-b-2 text-2xl font-bold pb-4'><span className='border-b-4 border-red-500 pb-4'>National News</span></h1>
 
             <Grid container rowSpacing={3} columnSpacing={3} className="mt-2">

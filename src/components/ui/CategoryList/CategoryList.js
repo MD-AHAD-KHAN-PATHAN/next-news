@@ -1,6 +1,7 @@
 'use client'
 // import { getAllCategories } from "@/utils/getAllCategories";
 import { Box, Button, Stack, Typography } from "@mui/material";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const CategoryList = () => {
@@ -28,7 +29,8 @@ const CategoryList = () => {
             <p className="border mt-2"></p>
             <Stack rowGap={1} sx={{mt: 2.5}}>
                 {
-                    data.map(category => <Button key={category.id} variant="outlined">{category.title}</Button>)
+                    data.map(category => 
+                    <Button key={category.id} variant="outlined"><Link href={`news?category=${category.title.toLowerCase()}`}>{category.title}</Link></Button>)
                 }
             </Stack>
         </Box>
