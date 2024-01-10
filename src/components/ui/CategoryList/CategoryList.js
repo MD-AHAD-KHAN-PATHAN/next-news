@@ -19,17 +19,13 @@ const CategoryList = () => {
         })
     }, [])
    
-    if (isLoading) return <p>Loading...</p>
-    if (!data) return <p>No profile data</p>
-    console.log(data);
-
     return (
         <Box className='bg-gray-100 p-4 mt-32 rounded'>
             <Typography variant="h6">Categories</Typography>
             <p className="border mt-2"></p>
             <Stack rowGap={1} sx={{mt: 2.5}}>
                 {
-                    data.map(category => 
+                    data?.map(category => 
                     <Button key={category.id} variant="outlined"><Link href={`news?category=${category.title.toLowerCase()}`}>{category.title}</Link></Button>)
                 }
             </Stack>
